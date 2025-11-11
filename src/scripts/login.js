@@ -6,22 +6,39 @@ const button = document.querySelector("#button-login");
 
 button.addEventListener("click" , (event) => {
 
-    const usernameValue = useremail.value;
+    event.preventDefault();
+
+    const useremailValue = useremail.value;
     const passwordValue = password.value;
 
-    if(usernameValue === "" || passwordValue === ""){
-        event.preventDefault(); // Evita de enviar as informações passadas no input
+    if(useremailValue === "" || passwordValue === ""){
         window.alert("Please fill in all the fields");
         return; 
     }
 
-    if(usernameValue !== "vanderson@gmail.com" || passwordValue !== "123456"){
-        event.preventDefault();
-        window.alert("Incorrect useremail or password !");
-        return; 
+    const usernameSession = sessionStorage.getItem("username");
+    const useremailSession = sessionStorage.getItem("useremail");
+    const passwordSession = sessionStorage.getItem("password");
+
+    if(useremailSession !== useremailValue || passwordSession !== passwordValue){
+        window.alert("email or password incorret");
+        return;
     }
 
-    window.alert("Acess granted !")
-    
+    window.alert("Acess granted !");
+    window.location.href = "home.html"
+
+});
+
+checkbox.addEventListener("change" ,() => {
+
+    const type = password.getAttribute("type");
+
+    if(type !== "password"){
+        password.setAttribute("type","password");
+        return;
+    }
+
+    password.setAttribute("type","text");
 
 });
