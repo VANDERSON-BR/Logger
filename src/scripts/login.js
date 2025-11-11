@@ -1,4 +1,4 @@
-const username = document.querySelector("#username-login");
+const useremail = document.querySelector("#useremail-login");
 const password = document.querySelector("#password-login");
 const checkbox = document.querySelector("#checkbox-login");
 const button = document.querySelector("#button-login");
@@ -6,7 +6,7 @@ const button = document.querySelector("#button-login");
 
 button.addEventListener("click" , (event) => {
 
-    const usernameValue = username.value;
+    const usernameValue = useremail.value;
     const passwordValue = password.value;
 
     if(usernameValue === "" || passwordValue === ""){
@@ -17,7 +17,7 @@ button.addEventListener("click" , (event) => {
 
     if(usernameValue !== "vanderson@gmail.com" || passwordValue !== "123456"){
         event.preventDefault();
-        window.alert("Incorrect username or password !");
+        window.alert("Incorrect useremail or password !");
         return; 
     }
 
