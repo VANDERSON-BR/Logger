@@ -1,113 +1,110 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Montserrat",sans-serif,serif;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif, serif;
 }
 
 html,
-body{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(0deg, #838DA1 5%, #123076 99%);
-    text-transform: uppercase;
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(0deg, #838da1 5%, #123076 99%);
+  text-transform: uppercase;
 }
-
-
 
 /*main*/
 
-main.box{
-    text-align: center;
-    color: white;
-    padding:50px;
-    background-color: #838DA1;
-    border-radius: 10px;
+main.box {
+  text-align: center;
+  color: white;
+  padding: 50px;
+  background-color: #838da1;
+  border-radius: 10px;
 }
 
-h1{
-    letter-spacing: 0.1rem;
+h1 {
+  letter-spacing: 0.1rem;
 }
 
-h2{
-    font-size: 3rem;
-    text-shadow: 0.1rem 0.1rem 1rem orange;  /*left bottom sombreamento */
+h2 {
+  font-size: 3rem;
+  text-shadow: 0.1rem 0.1rem 1rem orange; /*left bottom sombreamento */
 }
 
 p,
-hr{
-    margin: 25px 0;
+hr {
+  margin: 25px 0;
 }
 
-.btn{
-    padding: 1rem 4rem;
-    background-color: #133A95;
-    border-radius: 15px;
-    box-shadow: 0.1rem 0.1rem 1rem #133A95;
-    border: none;
-    font-weight: 700;
-    cursor: pointer;
-    transition: 0.15s;
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-
+.btn {
+  padding: 1rem 4rem;
+  background-color: #133a95;
+  border-radius: 15px;
+  box-shadow: 0.1rem 0.1rem 1rem #133a95;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.15s;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
 }
 
-.btn:hover{
-    background-color: #0F2D72;
+.btn:hover {
+  background-color: #0f2d72;
 }
 
 /*form login*/
 
-.form{
-    width: 25rem ;
+.form {
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  .inputs {
+    .input {
+      padding: 15px;
+      border: none;
+      border-radius: 5px;
+      display: block;
+      width: 100%;
+      margin-top: 1rem;
+      outline: none;
+    }
+  }
+
+  .show {
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    
-    .inputs {
-        .input {
-            padding: 15px;
-            border: none;
-            border-radius: 5px;
-            display: block;
-            width: 100%;
-            margin-top: 1rem;
-            outline: none;
-        }
-    }
-    
-    .show {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
 
-        input{
-            width: 1rem;
-            height: 1rem;
-            cursor: pointer;
+    input {
+      width: 1rem;
+      height: 1rem;
+      cursor: pointer;
 
-            &:checked{
-                accent-color: #133A95;
-            }
-        }
+      &:checked {
+        accent-color: #133a95;
+      }
     }
+  }
 }
 
 .recovery {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 
-    small{
-        font-size: 0.85rem;
-    }
+  small {
+    font-size: 0.85rem;
+  }
 }
