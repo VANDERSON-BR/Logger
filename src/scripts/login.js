@@ -1,4 +1,4 @@
-const useremail = document.querySelector("#useremail-login");
+const email = document.querySelector("#email-login");
 const password = document.querySelector("#password-login");
 const checkbox = document.querySelector("#checkbox-login");
 const button = document.querySelector("#button-login");
@@ -6,26 +6,26 @@ const button = document.querySelector("#button-login");
 
 button.addEventListener("click" , (event) => {
 
-    event.preventDefault();
+    event.preventDefault(); //Faz a verificação de todo o código antes de enviar as informações. Além disso, ele não vai recarregar mais a página, permitindo que entramos em home.html
 
-    const useremailValue = useremail.value;
+    const emailValue = email.value;
     const passwordValue = password.value;
 
-    if(useremailValue === "" || passwordValue === ""){
+    if(emailValue === "" || passwordValue === ""){
         window.alert("Please fill in all the fields");
         return; 
     }
 
     const usernameSession = sessionStorage.getItem("username");
-    const useremailSession = sessionStorage.getItem("useremail");
+    const emailSession = sessionStorage.getItem("email");
     const passwordSession = sessionStorage.getItem("password");
 
-    if(useremailSession !== useremailValue || passwordSession !== passwordValue){
-        window.alert("email or password incorret");
+    if(emailSession !== emailValue || passwordSession !== passwordValue){
+        window.alert("email or password incorrect");
         return;
     }
 
-    window.alert("Acess granted !");
+    window.alert("Access granted !");
     window.location.href = "home.html"
 
 });

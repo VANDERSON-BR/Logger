@@ -3,46 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Logger System - Index</title>
+    <title>Logger System - Recovery</title>
     <link rel="stylesheet" href="../style/global.css" />
   </head>
   <body>
     <main class="box">
       <form class="form" action="#">
-        <h1>login</h1>
+        <h1>Recovery</h1>
         <div class="inputs">
           <input
-            id="email-login"
+            id="email-recovery"
             class="input"
             type="email"
             placeholder="Digite seu email"
             required
           />
           <input
-            id="password-login"
+            id="password-recovery"
             class="input"
             type="password"
-            placeholder="Digite sua senha"
+            placeholder="Digite sua nova senha"
+            required
+          />
+          <input
+            id="password-recovery-confirm"
+            class="input"
+            type="password"
+            placeholder="Confirme sua nova senha"
             required
           />
         </div>
         <div class="show">
-          <label for="checkbox-login">show password</label>
-          <input 
-            id="checkbox-login" 
-            class="checkbox-login" 
-            type="checkbox" />
+          <label for="checkbox-recovery">show password</label>
+          <input
+            id="checkbox-recovery"
+            class="checkbox-recovery"   
+            type="checkbox"
+           />
         </div>
 
-        <button id="button-login" class="btn">login</button>
+        <button id="button-recovery" class="btn">recovery</button>
 
         <div class="recovery">
-          <small>Forgot your password ? Click <a href="recovery.html">here</a> to recovery</small>
+          <small>already have an account ? Click <a href="login.html">here</a></small>
           <small>Don't have account ? Click <a href="register.html">here</a> to create</small>
         </div>
       </form>
     </main>
 
-    <script src="../scripts/login.js"></script>
+    <script src="../scripts/recovery.js"></script>
   </body>
 </html>

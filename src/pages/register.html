@@ -1,61 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Logger System - Register</title>
-    <link rel="stylesheet" href="../style/global.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="../style/global.css" />
+  </head>
+  <body>
     <main class="box">
-        
-        <form 
-        class="form" 
-        action="#">
-            <h1>register</h1>
-            <div class="inputs">
-                <input 
-                    id="username-register" 
-                    class="input" 
-                    type="text" 
-                    placeholder="Digite seu nome" 
-                    required/>
-                <input 
-                    id="useremail-register" 
-                    class="input" 
-                    type="email" 
-                    placeholder="Digite seu email" 
-                    required/>
-                <input 
-                    id="password-register" 
-                    class="input" 
-                    type="password" 
-                    placeholder="Digite sua senha" 
-                    required/>
-            </div>
-            <div class="show">
-                <label for="checkbox">show password</label>
-                <input 
-                    id="checkbox-register" 
-                    class="checkbox-register" 
-                    type="checkbox" />
-            </div>
-            
-            <button 
-            id="button-register" 
-            class="btn">register</button>
-            
-            <div class="recovery">
-                <small>already have an account ? Click <a href="login.html">here</a></small>
-            </div>
-        </form>
-    
+      <form class="form" action="#">
+        <h1>register</h1>
+        <div class="inputs">
+          <input
+            id="username-register"
+            class="input"
+            type="text"
+            placeholder="Digite seu nome"
+            required
+          />
+          <input
+            id="email-register"
+            class="input"
+            type="email"
+            placeholder="Digite seu email"
+            required
+          />
+          <input
+            id="password-register"
+            class="input"
+            type="password"
+            placeholder="Digite sua senha"
+            required
+          />
+        </div>
+        <div class="show">
+          <label for="checkbox-register">show password</label>
+          <input
+            id="checkbox-register"
+            class="checkbox-register"   
+            type="checkbox"
+           />
+        </div>
+
+        <button id="button-register" class="btn">register</button>
+
+        <div class="recovery">
+          <small>already have an account ? Click <a href="login.html">here</a></small>
+        </div>
+      </form>
     </main>
 
-
-
     <script src="../scripts/register.js"></script>
-
-</body>
+  </body>
 </html>

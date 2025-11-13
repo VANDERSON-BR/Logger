@@ -87,6 +87,10 @@ hr {
     justify-content: center;
     gap: 0.5rem;
 
+    label{
+      cursor: pointer;
+    }
+
     input {
       width: 1rem;
       height: 1rem;

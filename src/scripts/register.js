@@ -1,6 +1,6 @@
 
 const username = document.querySelector("#username-register");
-const useremail = document.querySelector("#useremail-register");
+const email = document.querySelector("#email-register");
 const password = document.querySelector("#password-register");
 const checkbox = document.querySelector("#checkbox-register");
 const button = document.querySelector("#button-register");
@@ -9,18 +9,32 @@ button.addEventListener('click', (event) => {
     event.preventDefault();
 
     const usernameValue = username.value;
-    const useremailValue = useremail.value;
+    const emailValue = email.value;
     const passwordValue = password.value;
 
-    if( usernameValue === "" || useremailValue === "" || passwordValue === ""){
+    if( usernameValue === "" || emailValue === "" || passwordValue === ""){
         window.alert("Please fill in all the fields");
         return;
     }
 
+    //criando novas chaves com seus respectivos valores
     sessionStorage.setItem("username" , usernameValue);
-    sessionStorage.setItem("useremail" , useremailValue);
+    sessionStorage.setItem("email" , emailValue);
     sessionStorage.setItem("password" , passwordValue);
 
     window.location.href = "login.html";
 
 });
+
+checkbox.addEventListener("change" , () => {
+    
+    const type = password.getAttribute("type");
+
+    if(type !== "password"){
+        password.setAttribute("type" , "password");
+        return;
+    }
+
+    password.setAttribute("type" , "text");
+
+})
