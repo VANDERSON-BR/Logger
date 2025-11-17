@@ -15,12 +15,18 @@ button.addEventListener('click', (event) => {
     if( usernameValue === "" || emailValue === "" || passwordValue === ""){
         window.alert("Please fill in all the fields");
         return;
-    }
+    };
+    
+    if(!validatePassword()){
+        window.alert("requirements not met");
+        return;
+    };
 
     //criando novas chaves com seus respectivos valores
     sessionStorage.setItem("username" , usernameValue);
     sessionStorage.setItem("email" , emailValue);
     sessionStorage.setItem("password" , passwordValue);
+
 
     window.location.href = "login.html";
 
@@ -37,4 +43,4 @@ checkbox.addEventListener("change" , () => {
 
     password.setAttribute("type" , "text");
 
-})
+});

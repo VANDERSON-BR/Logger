@@ -15,19 +15,24 @@ button.addEventListener("click" , (event) => {
     if( emailValue == "" || passwordValue == "" || passwordValueConfirm == ""){
         window.alert("Please fill in all the fields");
         return;
-    }
+    };
 
     const emailSession = sessionStorage.getItem("email");
 
     if(emailSession !== emailValue){
         window.alert("insert email is invalid or don't exist !");
         return;
-    }
+    };
 
     if(passwordValue !== passwordValueConfirm){
         window.alert("passwords don't match");
         return;
-    }
+    };
+
+    if(!validatePassword()){
+        window.alert("requirements not met");
+        return;
+    };
 
     sessionStorage.setItem("password", passwordValue);
 

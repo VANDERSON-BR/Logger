@@ -44,13 +44,26 @@
 
         <button id="button-recovery" class="btn">recovery</button>
 
-        <div class="recovery">
-          <small>already have an account ? Click <a href="login.html">here</a></small>
-          <small>Don't have account ? Click <a href="register.html">here</a> to create</small>
-        </div>
       </form>
+
+      <div class="recovery">
+        <small>already have an account ? Click <a href="login.html">here</a></small>
+        <small>Don't have account ? Click <a href="register.html">here</a> to create</small>
+      </div>
+    
     </main>
 
+    <div id="message-error">
+      <h2>the password must contain:</h2>
+      <p id="capital" class="invalid">One <strong>capital</strong> letter</p>
+      <p id="lowercase" class="invalid">One <strong>lowercase</strong> letter</p>
+      <p id="number" class="invalid">One <strong>number</strong></p>
+      <p id="specialCharacter" class="invalid">One <strong>special</strong> character (!@#$%^&*()_+...)</p>
+      <p id="length" class="invalid">At least <strong>8</strong> characters</p>
+    </div>
+
     <script src="../scripts/recovery.js"></script>
+    <script src="../scripts/validatePassword.js"></script>
+
   </body>
 </html>
